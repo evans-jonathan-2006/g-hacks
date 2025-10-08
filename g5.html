@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Timetable Generator - Multi Batch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="g5.css">
+</head>
+
+<body>
+  <header>
+    <h1>Smart Timetable Generator</h1>
+    <p>Multi-Batch, Clash-Free Automatic Scheduler 🧠✨</p>
+  </header>
+
+  <div class="container">
+    <h2>Add Faculty & Subject Details</h2>
+    <div class="form-grid">
+      <input type="text" id="faculty" placeholder="Faculty Name">
+      <input type="text" id="subject" placeholder="Subject">
+      <input type="number" id="hours" placeholder="Hours/Week" min="1" max="8">
+      <select id="batch">
+        <option value="">Select Batch</option>
+        <option value="Batch A">Batch A</option>
+        <option value="Batch B">Batch B</option>
+        <option value="Batch C">Batch C</option>
+        <option value="Batch D">Batch D</option>
+        <option value="Batch E">Batch E</option>
+      </select>
+      <button onclick="addFaculty()">Add</button>
+    </div>
+
+    <button style="width:100%;margin-top:15px;" onclick="generateTimetables()">Generate All Timetables</button>
+    <p id="alertMsg" class="alert"></p>
+
+    <div id="batchTables" class="batch-section"></div>
+  </div>
+
+  <script src="g5.js"></script>
+</body>
+</html>
